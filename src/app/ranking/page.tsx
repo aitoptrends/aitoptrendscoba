@@ -5,7 +5,7 @@ import PopularToolsTable from "@/components/popular-tools-table"
 export default function RankingPage() {
   return (
     <main className="min-h-screen bg-gray-50">
-      <BaseHeader />
+      <BaseHeader variant="secondary" />
 
       <div className="max-w-6xl mx-auto py-12 px-4">
         <h1 className="text-3xl font-bold mb-8">AI Tools Ranking</h1>
