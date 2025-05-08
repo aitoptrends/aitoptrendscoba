@@ -1,49 +1,23 @@
-import { Search } from "lucide-react"
-
-import Header from "@/components/Header"
-import ToolCard from "@/components/ToolCard"
-import PopularToolsTable from "@/components/PopularToolsTable"
-import CategorySection from "@/components/CategorySection"
-import NewsCard from "@/components/NewsCard"
+import HomeHeader from "@/components/home-header"
+import ToolCard from "@/components/tool-card"
+import PopularToolsTable from "@/components/popular-tools-table"
+import CategorySection from "@/components/category-section"
+import NewsCard from "@/components/news-card"
 import Footer from "@/components/Footer"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50">
-      <Header />
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-indigo-800 py-16 px-4 relative overflow-hidden">
-        <div className="max-w-6xl mx-auto text-center relative z-10">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-8">Find & Review the Top AI Tools of Today</h1>
-          <div className="relative max-w-xl mx-auto">
-            <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-              <Search className="h-5 w-5 text-gray-400" />
-            </div>
-            <input
-              type="text"
-              placeholder="Search for AI tool"
-              className="w-full py-3 pl-10 pr-4 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-        </div>
-        {/* Decorative lines */}
-        <div className="absolute inset-0 opacity-20">
-          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <path d="M0,50 C20,30 50,70 100,50 L100,100 L0,100 Z" fill="none" stroke="white" strokeWidth="0.5"></path>
-            <path d="M0,30 C30,10 40,90 100,30 L100,100 L0,100 Z" fill="none" stroke="white" strokeWidth="0.5"></path>
-          </svg>
-        </div>
-      </section>
+      <HomeHeader />
 
       {/* Top AI Tools Section */}
       <section className="py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-xl font-medium text-gray-700 mb-6">Top AI tools</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <ToolCard name="ChatGPT" rating="4.9/5" image="/next.svg" />
-            <ToolCard name="ChatGPT" rating="4.9/5" image="/next.svg" />
-            <ToolCard name="ChatGPT" rating="4.9/5" image="/next.svg" />
+            <ToolCard name="ChatGPT" rating="4.9/5" image="/placeholder.svg?height=200&width=300" />
+            <ToolCard name="ChatGPT" rating="4.9/5" image="/placeholder.svg?height=200&width=300" />
+            <ToolCard name="ChatGPT" rating="4.9/5" image="/placeholder.svg?height=200&width=300" />
           </div>
         </div>
       </section>
@@ -185,19 +159,19 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <NewsCard
               title="AI Tools are Redefining Productivity in 2025: What's Leading the Charge?"
-              image="/next.svg"
+              image="/placeholder.svg?height=150&width=300"
             />
             <NewsCard
               title="From Chatbots to Super Apps: How AI Tools are Shaping Our Daily Lives"
-              image="/next.svg"
+              image="/placeholder.svg?height=150&width=300"
             />
             <NewsCard
               title="The Rise of Specialized AI Tools: Custom Solutions for Every Industry"
-              image="/next.svg"
+              image="/placeholder.svg?height=150&width=300"
             />
             <NewsCard
               title="Which AI Tools Are Winning Users' Hearts in 2025?"
-              image="/next.svg"
+              image="/placeholder.svg?height=150&width=300"
             />
           </div>
         </div>

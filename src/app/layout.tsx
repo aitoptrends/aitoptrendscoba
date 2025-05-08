@@ -13,11 +13,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Add a meta tag to prevent wallet extensions from activating */}
+        <meta name="web3-disabled" content="true" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
