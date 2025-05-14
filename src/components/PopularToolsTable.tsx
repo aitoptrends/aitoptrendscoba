@@ -1,40 +1,62 @@
-import React from "react";
-
-const stats = [
-  { rank: 1, tool: "ChatGPT", category: "Chatbot", visit: "4.70B", growth: "643.2M", rate: "16.47%" },
-  { rank: 2, tool: "Grok", category: "Chatbot", visit: "4.70B", growth: "643.2M", rate: "16.47%" },
-  { rank: 3, tool: "Canva", category: "Design Generator", visit: "4.70B", growth: "643.2M", rate: "16.47%" },
-  { rank: 4, tool: "Claude", category: "Chatbot", visit: "4.70B", growth: "643.2M", rate: "16.47%" },
-  { rank: 5, tool: "Copilot", category: "Chatbot", visit: "4.70B", growth: "643.2M", rate: "16.47%" },
-];
+import { TrendingUp } from "lucide-react"
 
 export default function PopularToolsTable() {
+  const tools = [
+    { rank: 1, name: "ChatGPT", category: "Chatbot", visits: "4.70B", growth: "643.2M", rate: "16.47%" },
+    { rank: 2, name: "Grok", category: "Chatbot", visits: "4.70B", growth: "643.2M", rate: "16.47%" },
+    { rank: 3, name: "Canva", category: "Design Generator", visits: "4.70B", growth: "643.2M", rate: "16.47%" },
+    { rank: 4, name: "Claude", category: "Chatbot", visits: "4.70B", growth: "643.2M", rate: "16.47%" },
+    { rank: 5, name: "Copilot", category: "Chatbot", visits: "4.70B", growth: "643.2M", rate: "16.47%" },
+  ]
+
   return (
-    <div className="overflow-x-auto">
-      <table className="min-w-full text-sm text-left bg-white rounded-lg">
-        <thead>
-          <tr className="text-gray-700 font-semibold">
-            <th className="py-2 px-3">Rank</th>
-            <th className="py-2 px-3">Tool</th>
-            <th className="py-2 px-3">Category</th>
-            <th className="py-2 px-3">Monthly Visit</th>
-            <th className="py-2 px-3">Growth</th>
-            <th className="py-2 px-3">Growth Rate</th>
+    <div className="overflow-x-auto rounded-lg">
+      <table className="min-w-full">
+        <thead className="bg-gray-100">
+          <tr>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-medium text-gray-600">
+              Rank
+            </th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-medium text-gray-600">
+              Tool
+            </th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-medium text-gray-600">
+              Category
+            </th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-medium text-gray-600">
+              Monthly Visit
+            </th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-medium text-gray-600">
+              Growth
+            </th>
+            <th scope="col" className="px-6 py-3 text-left text-sm font-medium text-gray-600">
+              Growth Rate
+            </th>
           </tr>
         </thead>
-        <tbody>
-          {stats.map((row) => (
-            <tr key={row.rank} className="border-t border-gray-200">
-              <td className="py-2 px-3 font-bold">{row.rank}</td>
-              <td className="py-2 px-3">{row.tool}</td>
-              <td className="py-2 px-3">{row.category}</td>
-              <td className="py-2 px-3">{row.visit}</td>
-              <td className="py-2 px-3 flex items-center gap-1">↗ {row.growth}</td>
-              <td className="py-2 px-3">{row.rate}</td>
+        <tbody className="bg-white divide-y divide-gray-200">
+          {tools.map((tool) => (
+            <tr key={tool.rank} className="hover:bg-gray-50">
+              <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{tool.rank}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{tool.name}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{tool.category}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{tool.visits}</td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                <div className="flex items-center">
+                  <TrendingUp className="h-4 w-4 text-green-500 mr-1" />
+                  {tool.growth}
+                </div>
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                <div className="flex items-center">
+                  <TrendingUp className="h-4 w-4 text-green-500 mr-1" />
+                  {tool.rate}
+                </div>
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
-  );
-} 
+  )
+}

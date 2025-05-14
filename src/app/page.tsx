@@ -4,6 +4,7 @@ import PopularToolsTable from "@/components/popular-tools-table"
 import CategorySection from "@/components/category-section"
 import NewsCard from "@/components/news-card"
 import Footer from "@/components/Footer"
+import DropdownSelectors from "@/components/dropdown-selectors"
 
 export default function Home() {
   return (
@@ -23,59 +24,34 @@ export default function Home() {
       </section>
 
       {/* Popular Tools Section */}
-      <section className="py-12 px-4 bg-purple-50">
+      <section className="py-12 px-4 bg-[#C084FC]/15">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-2">
             Uncover the Most Popular AI Tools — Tried, Tested, Trusted
           </h2>
-          <div className="w-48 h-1 mx-auto bg-purple-200 my-6"></div>
+          <div className="w-full h-1 bg-gray-300 my-4"></div>
 
-          <div className="flex flex-wrap gap-2 justify-center mb-6">
-            <button className="flex items-center gap-1 px-3 py-1 bg-white rounded-full border text-sm">
-              <span className="h-2 w-2 rounded-full bg-purple-500"></span>
-              Worldwide
-              <span className="ml-1">×</span>
-            </button>
-            <button className="flex items-center gap-1 px-3 py-1 bg-white rounded-full border text-sm">
-              <span className="h-2 w-2 rounded-full bg-purple-500"></span>
-              Category
-              <span className="ml-1">×</span>
-            </button>
-            <button className="flex items-center gap-1 px-3 py-1 bg-white rounded-full border text-sm">
-              <span className="h-2 w-2 rounded-full bg-purple-500"></span>
-              January
-              <span className="ml-1">×</span>
-            </button>
-            <button className="flex items-center gap-1 px-3 py-1 bg-white rounded-full border text-sm">
-              <span className="h-2 w-2 rounded-full bg-purple-500"></span>
-              2025
-              <span className="ml-1">×</span>
-            </button>
-          </div>
+          <DropdownSelectors />
 
-          <div className="bg-gradient-to-r from-purple-600/70 to-indigo-600/70 rounded-lg p-4 text-white mb-4">
-            <div className="flex items-center gap-2 mb-2">
+          <div className="bg-gradient-to-r from-indigo-500/80 to-indigo-700/80 rounded-t-lg p-4 text-white">
+            <div className="flex items-center gap-2">
               <div className="bg-green-400 p-1 rounded">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                  <path
-                    fillRule="evenodd"
-                    d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z"
-                    clipRule="evenodd"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
                 </svg>
               </div>
-              <span className="font-medium">Top 5 - Monthly Traffic</span>
+              <span className="font-medium text-lg">Top 5 - Monthly Traffic</span>
             </div>
           </div>
 
           <PopularToolsTable />
 
-          <button className="w-full bg-slate-600 hover:bg-slate-700 text-white py-3 rounded-md mt-4 flex items-center justify-center gap-2">
+          <button className="w-full bg-teal-700 hover:bg-teal-800 text-white py-4 rounded-md mt-4 flex items-center justify-center gap-2">
             see full statistics
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path
                 fillRule="evenodd"
-                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
                 clipRule="evenodd"
               />
             </svg>
@@ -86,10 +62,10 @@ export default function Home() {
       {/* Categories Section */}
       <section className="py-12 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-center text-gray-800 mb-2">
+          <h2 className="text-2xl font-bold text-center text-slate-600 italic mb-2">
             Jump Into the Right AI Tools — Organized by Category
           </h2>
-          <div className="w-48 h-1 mx-auto bg-gray-200 my-6"></div>
+          <div className="w-full h-px bg-gray-300 my-6"></div>
           <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
             Unlock innovative AI technologies for all your tasks, industries, and needs.
           </p>
@@ -99,9 +75,9 @@ export default function Home() {
               title="Chatbot"
               items={[
                 { name: "ChatGPT", rank: 1 },
-                { name: "Gemini AI", rank: 2 },
-                { name: "Microsoft Copilot", rank: 3 },
-                { name: "Meta AI", rank: 4 },
+                { name: "Gemini-AI", rank: 2 },
+                { name: "Microsoft-Copilot", rank: 3 },
+                { name: "Meta-AI", rank: 4 },
                 { name: "DeepSeek", rank: 5 },
                 { name: "Grok-3", rank: 6 },
                 { name: "ChatSonic", rank: 7 },
@@ -124,23 +100,23 @@ export default function Home() {
             <CategorySection
               title="Writing"
               items={[
-                { name: "Quillbot", rank: 1 },
+                { name: "QuillBot", rank: 1 },
                 { name: "ContentShake AI", rank: 2 },
                 { name: "Rytr", rank: 3 },
                 { name: "Undetectable AI", rank: 4 },
-                { name: "Frase AI Content Writer", rank: 5 },
+                { name: "Free AI Content Writer", rank: 5 },
                 { name: "WriteSonic", rank: 6 },
                 { name: "Semrush", rank: 7 },
               ]}
             />
           </div>
 
-          <button className="w-full bg-slate-600 hover:bg-slate-700 text-white py-3 rounded-md mt-4 flex items-center justify-center gap-2">
+          <button className="w-full bg-teal-700 hover:bg-teal-800 text-white py-4 rounded-md mt-4 flex items-center justify-center gap-2">
             see all categories
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path
                 fillRule="evenodd"
-                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
                 clipRule="evenodd"
               />
             </svg>
@@ -149,14 +125,15 @@ export default function Home() {
       </section>
 
       {/* News Section */}
-      <section className="py-12 px-4 bg-slate-600">
+        {/* News Section */}
+        <section className="py-16 px-4 bg-gradient-to-b from-[#0F172A]/65 to-[#C084FC]/65">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-center text-white mb-2">
+          <h2 className="text-2xl font-bold text-center text-white italic mb-2">
             Latest Drops: AI News, Insights, and Big Moves
           </h2>
-          <div className="w-48 h-1 mx-auto bg-slate-400 my-6"></div>
+          <div className="w-full h-px bg-white/50 my-6"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
             <NewsCard
               title="AI Tools are Redefining Productivity in 2025: What's Leading the Charge?"
               image="/placeholder.svg?height=150&width=300"
